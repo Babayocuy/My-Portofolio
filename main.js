@@ -1,4 +1,4 @@
-import "./sass/style.css";
+import "style.css";
 import "./sass/style.scss";
 
 const itemDivs = document.querySelectorAll(".item");

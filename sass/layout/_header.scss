@@ -1,0 +1,76 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/variables" as *;
+@use "../base/font-face" as *;
+
+.hero {
+  padding-block: 1.5em;
+  padding-inline: 1rem;
+
+  .hero-bg {
+    background-color: #2c59a0;
+    background-image: url(/hero-bg.jpg);
+    background-size: 110% cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-block: 11rem;
+    max-width: 100%;
+    border-radius: 1.5rem;
+    position: relative;
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      > * {
+        color: $white;
+      }
+
+      p {
+        opacity: 0.9;
+      }
+    }
+
+    .logo-vva {
+      background-color: $light-dark;
+      border-radius: 0.5rem;
+      padding: 0 0.3em;
+      color: $white;
+      position: absolute;
+      top: 99%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      span {
+        color: $yellow;
+      }
+    }
+  }
+}
+
+@include mq(lg) {
+  .hero-bg {
+    background-size: 108% 108%;
+  }
+}
+@include mq(md) {
+  .hero-bg {
+    background-size: 120% 110%;
+  }
+}
+@include mq(sm) {
+  .hero-bg {
+    background-size: 120% 100%;
+  }
+}
+@include mq(xs) {
+  .hero {
+    padding: 0.5em;
+  }
+
+  .hero-bg {
+    background-size: 200% 100%;
+  }
+}

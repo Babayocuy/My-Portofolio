@@ -1,0 +1,69 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/variables" as *;
+
+footer {
+  margin-top: $size-6;
+  padding: $size-5 $size-2;
+  background-color: $darken;
+
+  > * {
+    color: $white;
+  }
+
+  .top,
+  .bottom,
+  .logos,
+  .logos > * {
+    display: flex;
+    align-items: center;
+  }
+
+  .top,
+  .bottom {
+    padding-inline: $size-6;
+  }
+
+  .top {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid $white;
+    margin-bottom: 1rem;
+    padding-bottom: 1em;
+  }
+
+  .bottom {
+    justify-content: space-between;
+
+    span {
+      color: $yellow;
+    }
+  }
+
+  .logos :where(span) {
+    margin-left: 0.5em;
+  }
+
+  .logos :where(div:last-child) {
+    margin-left: 2em;
+  }
+}
+
+@include mq(lg) {
+  footer {
+    padding: $size-2 1em;
+
+    .top,
+    .bottom {
+      padding-inline: 1em;
+    }
+  }
+}
+
+@include mq(xs) {
+  footer {
+    .top,
+    .bottom {
+      padding-inline: 0;
+    }
+  }
+}

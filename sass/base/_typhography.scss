@@ -1,0 +1,134 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/variables" as *;
+@use "../base/font-face" as *;
+
+* {
+  font-family: Noto-sans;
+}
+
+// HEADER
+.hero-text {
+  h1 {
+    font-size: $size-6;
+    font-weight: 600;
+  }
+}
+
+h3 {
+  font-size: $size-3;
+}
+
+@include mq(lg) {
+  .hero-text {
+    h1 {
+      font-size: $size-5;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@include mq(sm) {
+  .hero-text {
+    h1 {
+      width: max-content;
+    }
+  }
+}
+
+@include mq(xs) {
+  .hero-text {
+    h1 {
+      width: max-content;
+      font-size: $size-4;
+    }
+
+    p {
+      line-height: 1.2;
+    }
+  }
+}
+
+// MAIN
+
+@include mq(sm) {
+  .detail {
+    p,
+    span {
+      font-size: 0.85rem;
+    }
+  }
+}
+@include mq(xs) {
+  .detail {
+    p,
+    span {
+      font-size: 0.5rem;
+    }
+
+    h3 {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+// FOOTER
+.logos :where(:first-child, :last-child) {
+  font-weight: 400;
+}
+
+.top {
+  h3 {
+    font-size: $size-1;
+  }
+}
+
+.bottom {
+  h3:last-of-type {
+    font-size: 1rem;
+  }
+}
+
+@include mq(sm) {
+  footer {
+    .top {
+      h3 {
+        font-size: 1rem;
+      }
+
+      .logos :where(:first-child, :last-child) {
+        font-size: 0.8rem;
+      }
+    }
+
+    .bottom {
+      h3,
+      h3:last-of-type {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+@include mq(xs) {
+  footer {
+    .top {
+      h3 {
+        font-size: 0.8rem;
+      }
+
+      .logos :where(:first-child, :last-child) {
+        font-size: 0.5rem;
+      }
+    }
+
+    .bottom {
+      h3,
+      h3:last-of-type {
+        font-size: 0.5rem;
+      }
+    }
+  }
+}

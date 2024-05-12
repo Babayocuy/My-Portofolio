@@ -1,0 +1,111 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/variables" as *;
+
+main {
+  margin-top: $size-4;
+  padding-inline: $size-7;
+
+  > * {
+    color: $white;
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: $size-4;
+    opacity: 0.9;
+  }
+
+  .main__grid-content {
+    display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(1fr, 2fr));
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 3rem;
+
+    .item {
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: span 2;
+      gap: 0.2em;
+      cursor: pointer;
+      padding-inline: 0.5rem;
+      transition: all 0.5s;
+      background-color: $grey;
+      border-radius: 2rem 2rem 2.5rem 2.5rem;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 9px 12px 3px -3px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    video {
+      border-radius: 2rem;
+      max-width: 100%;
+
+      &:hover {
+        outline: 1px solid white;
+      }
+    }
+
+    .detail {
+      width: 100%;
+      padding-inline: 2em;
+      margin-top: 0.5rem;
+      cursor: pointer;
+      display: inline-block;
+      opacity: 0.7;
+      transition: opacity 0.5s;
+
+      &::selection {
+        user-select: none;
+      }
+
+      p {
+        width: min(45ch, 50ch);
+      }
+
+      .date-stats {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+@include mq(xl) {
+  main {
+    padding-inline: 0;
+  }
+}
+
+@include mq(lg) {
+  main {
+    padding-inline: 1em;
+
+    .main__grid-content {
+      grid-template-columns: 1fr;
+      gap: $size-4;
+    }
+  }
+}
+
+@include mq(md) {
+  main {
+    padding-inline: 2em;
+    margin-top: $size-1;
+  }
+}
+
+@include mq(xs) {
+  main {
+    padding-inline: 0.5em;
+
+    .main__grid-content {
+      .detail {
+        padding-inline: 2em;
+      }
+    }
+  }
+}

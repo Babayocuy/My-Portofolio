@@ -1,0 +1,27 @@
+// COLOR
+$light-dark: #28292a;
+$grey: #34363a;
+$darken: #141517;
+$white: #ffff;
+$yellow: #eec800;
+
+// SIZES
+$size-1: 1.25rem;
+$size-2: 1.375rem;
+$size-3: 1.5rem;
+$size-4: 2rem;
+$size-5: 2.8rem;
+$size-6: 4rem;
+$size-7: 5rem;
+$size-8: 5.325rem;
+$size-9: 7.5rem;
+$size-10: 10rem;
+
+.container {
+  width: min(100%, 95rem);
+  margin-inline: auto;
+}
+
+body {
+  background-color: $light-dark;
+}

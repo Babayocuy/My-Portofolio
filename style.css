@@ -101,7 +101,6 @@ select {
 }
 * {
   font-family: Noto-sans;
-  font-family: "Noto Sans", sans-serif;
 }
 
 .hero-text h1 {
@@ -194,7 +193,7 @@ h3 {
 }
 .hero .hero-bg {
   background-color: #2c59a0;
-  background-image: url(/hero-bg.jpg);
+  background-image: url(public/hero-bg.jpg);
   background-size: 110% cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -269,7 +268,7 @@ main .main__grid-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto auto auto;
-  gap: 3rem;
+  gap: 3em;
 }
 main .main__grid-content .item {
   display: grid;
@@ -322,7 +321,10 @@ main .main__grid-content .detail .date-stats {
 
 @media (max-width: 80em) {
   main {
-    padding-inline: 0;
+    padding-inline: 1em;
+  }
+  main .main__grid-content {
+    gap: 1.5em;
   }
 }
 @media (max-width: 64em) {

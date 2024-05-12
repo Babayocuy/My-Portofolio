@@ -20,7 +20,7 @@ main {
     // grid-template-columns: repeat(auto-fit, minmax(1fr, 2fr));
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto auto;
-    gap: 3rem;
+    gap: 3em;
 
     .item {
       display: grid;
@@ -76,7 +76,11 @@ main {
 
 @include mq(xl) {
   main {
-    padding-inline: 0;
+    padding-inline: 1em;
+
+    .main__grid-content {
+      gap: 1.5em;
+    }
   }
 }
 

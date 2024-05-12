@@ -107,8 +107,16 @@ main {
     padding-inline: 0.5em;
 
     .main__grid-content {
+      .item {
+        padding-inline: 0;
+        gap: 0.5em;
+
+        video {
+          border-radius: 1rem 1rem 2.5rem 2.5rem;
+        }
+      }
       .detail {
-        padding-inline: 2em;
+        padding-inline: 1em;
       }
     }
   }

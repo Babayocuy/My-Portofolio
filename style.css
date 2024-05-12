@@ -144,11 +144,15 @@ h3 {
   }
 }
 @media (max-width: 29.6em) {
-  .detail p,
-  .detail span {
-    font-size: 0.5rem;
+  main h1 {
+    font-size: 1.25rem;
   }
-  .detail h3 {
+  main .detail p,
+  main .detail span {
+    font-size: 0.6rem;
+    font-weight: 600;
+  }
+  main .detail h3 {
     font-size: 1rem;
   }
 }
@@ -181,7 +185,7 @@ h3 {
     font-size: 0.8rem;
   }
   footer .top .logos :where(:first-child, :last-child) {
-    font-size: 0.5rem;
+    font-size: 0.685rem;
   }
   footer .bottom h3,
   footer .bottom h3:last-of-type {
@@ -194,7 +198,7 @@ h3 {
 }
 .hero .hero-bg {
   background-color: #2c59a0;
-  background-image: url(public/hero-bg.jpg);
+  background-image: url(/hero-bg.jpg);
   background-size: 110% cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -347,8 +351,15 @@ main .main__grid-content .detail .date-stats {
   main {
     padding-inline: 0.5em;
   }
+  main .main__grid-content .item {
+    padding-inline: 0;
+    gap: 0.5em;
+  }
+  main .main__grid-content .item video {
+    border-radius: 1rem 1rem 2.5rem 2.5rem;
+  }
   main .main__grid-content .detail {
-    padding-inline: 2em;
+    padding-inline: 1em;
   }
 }
 footer {

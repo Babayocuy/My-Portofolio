@@ -101,6 +101,7 @@ select {
 }
 * {
   font-family: Noto-sans;
+  font-family: "Noto Sans", sans-serif;
 }
 
 .hero-text h1 {

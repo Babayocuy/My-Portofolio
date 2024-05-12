@@ -117,6 +117,27 @@
       </footer>
     </div>
 
-    <script type="module" src="main.js"></script>
+    <script type="module" src="main.js">
+      const itemDivs = document.querySelectorAll(".item");
+
+      itemDivs.forEach((itemDiv) => {
+        const MyVideo = itemDiv.querySelector("video");
+
+        itemDiv.addEventListener("mouseover", () => {
+          if (!MyVideo.paused) {
+            MyVideo.pause();
+          }
+
+          MyVideo.play();
+        });
+
+        itemDiv.addEventListener("mouseout", () => {
+          if (!MyVideo.paused) {
+            MyVideo.pause();
+            MyVideo.currentTime = 0;
+          }
+        });
+      });
+    </script>
   </body>
 </html>
